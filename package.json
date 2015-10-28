@@ -1,0 +1,30 @@
+{
+  "name": "react-boilerplate",
+  "version": "1.0.0",
+  "description": "A simple boilerplate for prototyping web apps in React.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node-sass index.scss dist/bundle.css & browserify index.js -o dist/bundle.js",
+    "dev": "node-sass -w index.scss dist/bundle.css & watchify index.js -o dist/bundle.js & browser-sync start --server dist --files \"**/*\""
+  },
+  "author": "Alexander Gugel <alexander.gugel@gmail.com>",
+  "license": "ISC",
+  "private": "true",
+  "devDependencies": {
+    "babelify": "^6.4.0",
+    "browserify": "^12.0.0",
+    "node-sass": "^3.4.1",
+    "react": "^0.14.0",
+    "react-dom": "^0.14.0",
+    "watchify": "^3.5.0"
+  },
+  "browserify": {
+    "transform": [
+      "babelify"
+    ]
+  },
+  "dependencies": {
+    "browser-sync": "^2.9.11"
+  }
+}
